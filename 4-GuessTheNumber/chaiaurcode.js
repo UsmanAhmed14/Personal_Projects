@@ -1,4 +1,4 @@
-const randomNumer = console.log(parseInt(Math.random() * 100 + 1));
+const randomNumer = parseInt(Math.random() * 100 + 1);
 
 const submit = document.querySelector("#subt");
 const userInput = document.querySelector("#guessField");
@@ -13,6 +13,15 @@ let prevArray = [];
 let numGuesses = 1;
 
 let playGame = true;
+
+if (playGame) {
+  submit.addEventListener("click", function (e) {
+    e.preventDefault();
+    const guess = parseInt(userInput.value);
+    console.log(guess);
+    validateGuess(guess);
+  });
+}
 
 function validateGuess(guess) {
   //
