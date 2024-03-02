@@ -13,3 +13,25 @@ let prevArray = [];
 let numGuesses = 1;
 
 let playGame = true;
+
+function validateGuess(guess) {
+  //
+}
+
+function checkGuess(guess) {
+  //
+}
+function displayGuess(guess) {
+  //
+}
+
+function displayMessage(message) {
+  //
+}
+
+function endGame() {
+  //
+}
+function newGame() {
+  //
+}
