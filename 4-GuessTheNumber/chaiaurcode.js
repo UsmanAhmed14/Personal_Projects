@@ -46,6 +46,14 @@ function validateGuess(guess) {
 
 function checkGuess(guess) {
   //
+  if (guess === randomNumer) {
+    displayMessage("You guessed it right !");
+    endGame();
+  } else if (guess < randomNumer) {
+    displayMessage("Number is TOO low");
+  } else if (guess > randomNumer) {
+    displayMessage("Number is TOO high");
+  }
 }
 function displayGuess(guess) {
   //
