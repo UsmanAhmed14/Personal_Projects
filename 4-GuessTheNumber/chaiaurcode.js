@@ -29,7 +29,7 @@ function validateGuess(guess) {
     alert("Please enter a valid number");
   } else if (guess < 1) {
     alert("Please enter a number, more than 1");
-  } else if (guess < 100) {
+  } else if (guess > 100) {
     alert("Please enter a number, less than 100");
   } else {
     prevGuess.push(guess);
@@ -56,11 +56,14 @@ function checkGuess(guess) {
   }
 }
 function displayGuess(guess) {
-  //
+  userInput.value = "";
+  guessSlot.innerHTML += `${guess}, `;
+  numGuesses++;
+  remaining.innerHTML = `${10 - numGuesses}`;
 }
 
 function displayMessage(message) {
-  //
+  lowOrHi.innerHTML = `<h2>${message}</h2>`;
 }
 
 function endGame() {
