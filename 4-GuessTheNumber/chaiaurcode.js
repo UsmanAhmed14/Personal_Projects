@@ -81,5 +81,11 @@ function newGame() {
     randomNumer = parseInt(Math.random() * 100 + 1);
 
     playGame = true;
+    prevGuess = [];
+    numGuess = 1;
+    guessSlot.innerHTML = "";
+    remaining.innerHTML = `${10 - numGuesses}`;
+    userInput.removeAttribute("disable");
+    startOver.removeChild(p);
   });
 }
